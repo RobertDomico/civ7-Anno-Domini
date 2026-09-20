@@ -8,9 +8,6 @@
 		<Package>Mod</Package>
 		<AffectsSavedGames>0</AffectsSavedGames>
 	</Properties>
-	<Dependencies>
-		<Mod id="base-standard" title="LOC_MODULE_BASE_STANDARD_NAME"/>
-	</Dependencies>
 	<ActionCriteria>
 		<Criteria id="always">
 			<AlwaysMet></AlwaysMet>
@@ -18,11 +15,16 @@
 	</ActionCriteria>	
 	<ActionGroups>
 		<ActionGroup id="anno_domini" scope="game" criteria="always">
+			<Properties>
+				<LoadOrder>9999</LoadOrder>
+			</Properties>
 			<Actions>
-				<UpdateText>				
+				<UpdateText>	
+					<Item>text/CivilopediaUpdates.sql</Item>			
 					<Item>text/CalendarTextOverride.sql</Item>
 					<Item>text/CalendarTextOverride_FR.sql</Item>			
 				</UpdateText>
+
 			</Actions>
 		</ActionGroup>
 	</ActionGroups>
